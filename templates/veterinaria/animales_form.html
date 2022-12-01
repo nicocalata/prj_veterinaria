@@ -1,0 +1,14 @@
+{% extends "base_vet.html" %}
+{% load static %}
+{% block titulo %}Ingreso/modificacion de Mascotas{% endblock %}
+{% block titulo_principal %}Carga/modificacion de mascotas {% endblock %}
+{% block principal %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="submit" value="Enviar">
+
+    </form>
+
+{% endblock %}

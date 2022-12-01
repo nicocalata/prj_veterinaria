@@ -1,0 +1,31 @@
+{% extends "base_vet.html" %}
+{% load static %}
+{% block titulo %}Historial de la mascota{% endblock %}
+{% block titulo_principal %} <u> <center>Historial de la mascota </u></center>  {% endblock %}
+{% block principal %}
+    <table class="table table-hover">
+        <thead>
+            <tr class="table-danger">
+                <th>Está sano</th>
+                <th>Nombre</th>
+                <th>Enfermedad nombre</th>
+                <th>Enfermedad Tipo</th>
+            </tr>
+        </thead>
+
+            <tr>
+
+                <td> {% if historial.se_curo == False %} No {% endif %}
+                 {% if historial.se_curo == True %} Si {% endif %}</td>
+                <td> {{ historial.mascota}}</td>
+                <td> {{ historial.enfermedad.nombre }}</td>
+                <td>{{ historial.enfermedad.tipo }}</td>
+            </tr>
+
+    </table>
+{% endblock %}
+
+<!--    <h3> Está sano: {{ historial.se_curo}}</h3>-->
+<!--    <h3>Nombre: {{ historial.mascota}}</h3>-->
+<!--    <h3>Enfermedad nombre: {{ historial.enfermedad.nombre }}</h3>-->
+<!--    <h3>Enfermedad tipo: {{ historial.enfermedad.tipo }}</h3>-->

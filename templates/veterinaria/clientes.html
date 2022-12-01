@@ -1,0 +1,26 @@
+{% extends "base_vet.html" %}
+{% load static %}
+{% block titulo_principal %} <center>Administracion de Clientes</center>{% endblock %}
+{% block principal %}
+    <table class="table table-hover">
+        <thead>
+            <tr class="table-info">
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dni</th>
+                <th>Id</th>
+            </tr>
+        </thead>
+        {% for cliente in clientes %}
+            <tr>
+                <td> {{ cliente.nombre }}</td>
+                <td> {{ cliente.apellido }}</td>
+                <td> {{ cliente.num_dni }}</td>
+                <td> {{ cliente.id }}</td>
+                 <td> <a href='{% url "modificar_cliente" cliente.id %}'><img src="{% static 'imagenes/Editar_25.png' %}"></a></td>
+                <td> <a href='{% url "eliminar_cliente" cliente.id %}'><img src="{% static 'imagenes/Eliminar_25.png' %}"></a></td>
+
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

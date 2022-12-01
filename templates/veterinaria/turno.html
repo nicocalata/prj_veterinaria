@@ -1,0 +1,11 @@
+{% extends "base_vet.html" %}
+{% load static %}
+{% block titulo %}Datos del cliente{% endblock %}
+{% block titulo_principal %} <u> Turno </u> {% endblock %}
+{% block principal %}
+    <h3>Fecha: {{ turno.fecha }}</h3>
+    <h3>Hora: {{ turno.horario }}</h3>
+    <h3>Mascota: {{ turno.mascota }}</h3>
+    <h3>Para: {{ turno.equipo_diagnostico  }}</h3>
+
+{% endblock %}

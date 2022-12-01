@@ -1,0 +1,11 @@
+{% extends "base_vet.html" %}
+{% load static %}
+{% block titulo %}Datos del cliente{% endblock %}
+{% block titulo_principal %} <u> Datos del cliente </u> {% endblock %}
+{% block principal %}
+    <h3> Nombre: {{ cliente.nombre }}</h3>
+    <h3>Apellido: {{ cliente.apellido }}</h3>
+    <h3>Dni: {{ cliente.num_dni }}</h3>
+    <h3>Localidad: {{ cliente.direccion.localidad }}</h3>
+
+{% endblock %}

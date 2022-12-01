@@ -1,0 +1,14 @@
+{% extends "base_vet.html" %}
+{% load static %}
+{% block titulo %}Ingreso/modificacion Historiales{% endblock %}
+{% block titulo_principal %}Carga/modificacion de Historiales {% endblock %}
+{% block principal %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="submit" value="Enviar">
+
+    </form>
+
+{% endblock %}

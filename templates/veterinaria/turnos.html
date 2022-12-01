@@ -1,0 +1,24 @@
+{% extends "base_vet.html" %}
+{% load static %}
+{% block titulo_principal %} <center>Administracion de Turnos </center> <br>{% endblock %}
+{% block principal %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Mascota</th>
+                <th>Id</th>
+            </tr>
+        </thead>
+        {% for turno in turnos %}
+            <tr>
+                <td> {{ turno.fecha }}</td>
+                <td> {{ turno.horario }}</td>
+                <td> {{ turno.mascota }}</td>
+                <td> {{ turno.id }}</td>
+
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base_vet.html" %}
+{% load static %}
+{% block titulo %}Ingreso/modificacion Turno{% endblock %}
+{% block titulo_principal %}Carga/modificacion Turnos {% endblock %}
+{% block principal %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="submit" value="Enviar">
+
+    </form>
+
+{% endblock %}

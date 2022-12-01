@@ -1,0 +1,12 @@
+{% extends "base_vet.html" %}
+{% load static %}
+{% block titulo %}Datos del Animal{% endblock %}
+{% block titulo_principal %} <u>Datos de la mascota </u>{% endblock %}
+{% block principal %}<br>
+    <h4> Nombre: {{ animal.nombre }}</h4>
+    <h4>Tipo: {{animal.tipo_mascota}}</h4>
+    <h4>Raza: {{ animal.raza }}</h4>
+    <h4>Dueño: {{ animal.cliente }}</h4>
+
+
+{% endblock %}
